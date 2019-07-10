@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS product;
+
+CREATE TABLE product (
+    NDB_No INTEGER PRIMARY KEY,
+    Long_Name VARCHAR(200),
+    Data_Source TEXT,
+    GTIN_UPC TEXT,
+    Manufacturer TEXT,
+    Date_Modified TIMESTAMP,
+    Date_available TIMESTAMP,
+    Ingredients TEXT
+);
+
+
+\copy product from '../SortedProducts.csv' DELIMITER ',' CSV
